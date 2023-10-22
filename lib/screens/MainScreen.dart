@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:uni_project/screens/AllTVShows.dart';
+import 'package:uni_project/screens/FavoriteTVShows.dart';
+import 'package:uni_project/screens/SearchScreen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -40,7 +43,11 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ),
         backgroundColor: Color(0xff18162e),
-        body: TabBarView(children: []),
+        body: TabBarView(children: [
+          AllTVShows(),
+          FavoriteTVShows(),
+          SearchScreen(),
+        ]),
       ),
     );
   }
