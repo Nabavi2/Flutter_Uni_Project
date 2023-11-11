@@ -26,8 +26,8 @@ class _MainScreenState extends State<MainScreen> {
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: size.height * 0.075,
-          backgroundColor: Color(0xff18162e),
-          bottom: TabBar(
+          backgroundColor: const Color(0xff18162e),
+          bottom: const TabBar(
             tabs: [
               Tab(
                 icon: Icon(Icons.home),
@@ -42,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
             indicatorColor: Colors.white,
           ),
         ),
-        backgroundColor: Color(0xff18162e),
+        backgroundColor: const Color(0xff18162e),
         body: TabBarView(children: [
           AllTVShows(),
           FavoriteTVShows(),

@@ -24,11 +24,8 @@ class _AllTVShowsState extends State<AllTVShows> {
     return ListView.builder(
       itemCount: ptvShowsList.length + (_page != _totalPages ? 1 : 0),
       itemBuilder: (ctx, index) {
-        if (_totalPages == 6617) {
-          provider.getItems(_page);
-          _page++;
-        }
-
+        provider.getItems(_page);
+        _page++;
         return index < ptvShowsList.length
             ? CustomCard(
                 id: ptvShowsList[index].id,
@@ -42,9 +39,8 @@ class _AllTVShowsState extends State<AllTVShows> {
                 width: size.width,
                 height:
                     size.width < 500 ? size.height * 0.12 : size.height * 0.24,
-                child: Center(
+                child: const Center(
                     child: CircularProgressIndicator(
-                        // color: Colors.white,
                         )),
               );
       },
